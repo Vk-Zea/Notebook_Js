@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        Kendo.observable
+        var viewModel = kendo.observable({
+            Name: 'Nombre',
+            Age: 30,
+            Description: 'Software Developer',
+            Greeting: function () {
+                alert('Good Morning');
+            }
+        });
+        viewModel.set(Coche.Marca, Seat);
+
+        viewModel.get(Coche.Marca);
+
+        viewModel.viewmodel()
+
+            kendo.data.binders.bool = kendo.data.Binder.extend({
+                init: function (element, bindings, options) {
+                    //call the base constructor
+                    kendo.data.Binder.fn.init.call(this, element, bindings, options);
+
+                    var that = this;
+                    //listen for the change event of the element
+                    $(that.element).on("change", function () {
+                        that.change(); //call the change function
+                    });
+                },
+                refresh: function () {
+                    var that = this,
+                        value = that.bindings["bool"].get();
+                    $(that.element).val(value);
+                },
+                change: function () {
+                    var value = this.element.value;
+                    this.bindings["bool"].set(value);
+                }
+            });
+    </script>
+</body>
+
+</html>

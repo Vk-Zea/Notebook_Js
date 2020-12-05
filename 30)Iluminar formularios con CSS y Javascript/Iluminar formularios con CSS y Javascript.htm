@@ -1,0 +1,53 @@
+<head>
+    <style type="text/css">
+        .cajon {
+            PADDING-RIGHT: 0.1em;
+            PADDING-LEFT: 0.1em;
+            PADDING-BOTTOM: 0.1em;
+            FONT: 9pt "Verdana, Tahoma, Arial";
+            MARGIN-LEFT: 0.1em;
+            PADDING-TOP: 0.1em;
+            BACKGROUND-COLOR: #FFFFF0;
+            TEXT-ALIGN: left
+        }
+
+        .boton {
+            BORDER-RIGHT: #000000 1px solid;
+            BORDER-TOP: #000000 1px solid;
+            FONT-SIZE: 11px;
+            BACKGROUND: #FFFFF0;
+            BORDER-LEFT: #000000 1px solid;
+            COLOR: #000000;
+            BORDER-BOTTOM: #000000 1px solid;
+            FONT-STYLE: normal;
+            FONT-FAMILY: verdana, arial, "trebuchet MS", helvetica, sans-serif
+        }
+    </style>
+</head>
+<script>
+    function form_uno(num_form, num_elem_form, color_entrada) {
+        document.forms[num_form].elements[num_elem_form].style.backgroundColor = color_entrada;
+        document.forms[num_form].elements[num_elem_form].focus();
+    }
+    function form_dos(num_form, num_elem_form, color_default) {
+        document.forms[num_form].elements[num_elem_form].style.backgroundColor = color_default;
+    }
+</script>
+<form method="post" action="" name="miformulario2">
+    <input type="text" name="campo12" onMouseOver="form_uno(1,0,'Lavender');" onMouseOut="form_dos(1,0,'FFFFF0');"
+        class="cajon">
+    <br>
+    <input type="text" name="campo22" onMouseOver="form_uno(1,1,'red');" onMouseOut="form_dos(1,1,'FFFFF0');">
+    <br>
+    <textarea name="textarea" onMouseOver="form_uno(1,2,'blue');" onMouseOut="form_dos(1,2,'FFFFF0');"
+        class="cajon"></textarea>
+    <br>
+    <select name="select" onMouseOver="form_uno(1,3,'cccccc');" onMouseOut="form_dos(1,3,'FFFFF0');" class="cajon">
+        <option value="1">uno</option>
+        <option value="2">dos</option>
+        <option value="3">tres</option>
+        <option value="4">cuatro</option>
+        <option value="5">cinco</option>
+    </select>
+    <input type="submit" name="Submit" value="Enviar" class="boton">
+</form>

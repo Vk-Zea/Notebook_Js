@@ -1,0 +1,28 @@
+
+<html>
+    <head>
+        <title>Ejemplo para deshabilitar radio butons</title>
+    
+    <script>
+    indice_marcado = 0
+    function deshabilitar(formulario,idradio){
+        formulario.miradio[indice_marcado].checked = true
+        formulario.miradio[idradio].blur()
+    }
+    </script>
+    </head>
+    
+    <body>
+    <h1>Ejemplo para deshabilitar radio butons</h1>
+    
+    <form name="f1">
+    <input type="radio" name="miradio" value="Lo que sea" onclick="deshabilitar(this.form,0)" checked> Hola ponte encima!
+    <br>
+    <input type="radio" name="miradio" value="otra cosa" onclick="deshabilitar(this.form,1)"> Ponte aquí tambien
+    <br>
+    <input type="radio" name="miradio" value="más cosas" onclick="deshabilitar(this.form,2)"> Ponte aquí tambien
+    </form>
+    
+    </body>
+    </html>
+    

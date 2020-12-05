@@ -1,0 +1,9 @@
+<script>
+    var f1 = new Date(2015, 11, 31); //31 de diciembre de 2015
+    var f2 = new Date(2015, 11, 31, 2);
+    f1.setHours(0, 0, 0, 0);
+    f2.setHours(0, 0, 0, 0);
+    if (f1.getTime() == f2.getTime()) {
+        console.log("Son la misma fecha");
+    }
+</script>

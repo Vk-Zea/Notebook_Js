@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Tabla</title>
+	<script>
+		var color1 = "";
+		var color2 = "";
+		function change(elemento) {
+			if (color1 == "#f34") {
+				elemento.style.backgroundColor = color1 = "#fff";
+			} else {
+				elemento.style.backgroundColor = color1 = "#f34";
+			}
+		}
+		function change2(elemento) {
+			if (color2 == "#f34") {
+				elemento.style.backgroundColor = color2 = "#fff";
+			} else {
+				elemento.style.backgroundColor = color2 = "#f34";
+			}
+		}
+	</script>
+	<table width=100>
+		<tr>
+			<td bgcolor="#dddddd" id="celda1" onmouseover="cambiar_color_over(this)"
+				onmouseout="cambiar_color_out(this)">Casilla numero 1</td>
+		</tr>
+		<tr>
+			<td bgcolor="#dddddd" id="celda2" onmouseover="cambiar_color_over(this)"
+				onmouseout="cambiar_color_out(this)">Casilla numero 2</td>
+		</tr>
+		
+		<tr>
+			<td bgcolor="#dddddd" id="celda10" onmouseover="cambiar_color_over(this)"
+				onmouseout="cambiar_color_out(this)">Casilla numero 10</td>
+		</tr>
+	</table>
+	<form name=fcolor>
+		Numero de celda: <input type=text name=celda size=3>
+		<br>
+		Color: <input type=text name=micolor size=8>
+		<br>
+		<input type=button value="Cambiar color" onclick="cambia_color()">
+	</form>
+	<script>
+		function cambia_color() {
+			celda = document.getElementById("celda" + document.fcolor.celda.value)
+			celda.style.backgroundColor = document.fcolor.micolor.value
+		}
+		function cambiar_color_over(celda) {
+			celda.style.backgroundColor = "#66ff33"
+		}
+		function cambiar_color_out(celda) {
+			celda.style.backgroundColor = "#dddddd"
+		}
+	</script>

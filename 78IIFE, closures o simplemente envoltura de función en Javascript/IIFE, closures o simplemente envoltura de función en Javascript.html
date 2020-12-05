@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+   
+    <script>
+function miFuncion(){
+	var x = "hola DesarrolloWeb.com";
+}
+(function(){
+	//código de tu función
+}());
+var y = 3;
+var x = y
+;(function(){
+    //Ahora es mejor todavía!
+}());
+
+
+(function(w,d,o){
+    //Ahora w es un alias (shortcut) para window
+    //d es un alias de document
+    //o es un alias de otraVariableMuyLarga
+}(window, document, otraVariableMuyLarga));
+var cuadrado = {
+    altura: 2,
+    anchura: 3,
+    area: function(){
+        return this.altura * this.anchura;
+    }
+}
+
+cuadrado.altura=10;
+console.log(cuadrado.area());
+
+var cuadrado2 = (function(al, an){
+    return {
+        altura: al,
+        anchura: an,
+        area: function(){
+            return this.altura * this.anchura;
+        }
+    };
+}(5,4));
+
+console.log(cuadrado2.area());
+cuadrado2.altura=10;
+console.log(cuadrado2.area());
+
+var cuadrado3 = (function(al, an){
+    var altura = al;
+    var anchura = an;
+    return {
+        area: function(){
+            return altura * anchura;
+        }
+    };
+}(4,6));
+
+console.log(cuadrado3.area());
+console.log(cuadrado3.altura); // me dice que undefined
+
+    </script>
+
+
+</body>
+</html>

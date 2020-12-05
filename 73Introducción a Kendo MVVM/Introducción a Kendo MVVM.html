@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var viewModel = kendo.observable({
+            Name: 'Nombre',
+            Age: 30,
+            Description: 'Software Developer',
+            Greeting: function () {
+                alert('Good Morning');
+            }
+        });
+
+        <div id="example">
+            Name: <label data-bind='text: Name'></label> <br />
+            Age: <label data-bind='text: Age' ></label> <br />
+            Description: <label data-bind='text: Description' ></label><br />
+            <input type='button' data-bind="click:Greeting" value="Say Hello" />
+        </div>
+    </script>
+</body>
+
+</html>

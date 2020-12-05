@@ -1,0 +1,32 @@
+<script language="javascript">
+    //Autor: Bruno Suárez Laffargue
+    //Version: 1.1
+    
+    //Definimos las variables necesarias
+    variable=unValorPorDefecto;//Habrá que establecerlo
+    
+    //Capturamos la URL
+    var callingURL = document.URL;
+    
+    //Separamos los parametros
+    var cgiString = callingURL.substring(callingURL.indexOf('?')+1,callingURL.length);
+    
+    //Fijamos el sepador entre parametros
+    var DELIMETER = '&';
+    
+    //Eliminamos la almohadilla, si es que existe... cortamos por lo sano!
+    if (cgiString.indexOf('#')!=-1){
+        cgiString=cgiString.slice(0,cgiString.indexOf('#'));
+    }
+    
+    //Troceamos el cgiString ya limpiado, separando cada par variable=valor
+    //en una de las posiciones del array
+    var arrayParams=cgiString.split(DELIMETER);
+    
+    //Recorremos el array de parametros evaluando cada uno de los pares variable=valor
+    for (var i=0;i<arrayParams.length;i++){
+        eval(arrayParams[i].substring(0,arrayParams[i].indexOf('=')+1)+"\""+
+        arrayParams[i].substring(arrayParams[i].indexOf('=')+1,arrayParams
+         [i].length)+"\"");
+    }
+    </script>

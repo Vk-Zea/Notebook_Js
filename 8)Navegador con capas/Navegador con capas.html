@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body onLoad="init()">
+  <script language="javascript">
+    var capa
+
+    ns4 = (document.layers) ? true : false
+    ie4 = (document.all) ? true : false
+
+    function init() {
+      if (ns4) {
+        capa1 = document.descripcion1
+        capa2 = document.descripcion2
+        capa3 = document.descripcion3
+      }
+      if (ie4) {
+        capa1 = descripcion1.style
+        capa2 = descripcion2.style
+        capa3 = descripcion3.style
+      }
+    }
+
+    function muestra(obj) {
+      if (ns4) obj.visibility = "show"
+      else if (ie4) obj.visibility = "visible"
+    }
+
+    function oculta(obj) {
+      if (ns4) obj.visibility = "hide"
+      else if (ie4) obj.visibility = "hidden"
+    }
+
+  </script>
+  <div align="" id="enlaces" style="font-size: 10pt; font-family: arial,verdana,helvetica; font-weight: bold; color: #333399; position: absolute; height: 58; width: 100; background-color: #ffffcc; text-align: right;top: 10px;left: 10px">
+
+    <a href="#" OnMouseOver="muestra(capa1)" OnMouseOut= "oculta(capa1)">Mis Amigos</a>
+    <br>
+    <a href="#" OnMouseOver="muestra(capa2)" OnMouseOut= "oculta(capa2)">Mi pueblo</a>
+    <br>
+    <a href="#" OnMouseOver="muestra(capa3)" OnMouseOut= "oculta(capa3)">Enlaces</a>
+    
+    </div>
+    <div id="descripcion1" style= "position:Absolute;left:150; top:10; background-color:#cccccc; visibility:hidden;width:250px;height:58px;font-size: 8pt; font-family: arial,verdana,helvetica; color: #333399;padding:5px">Los amigos reunidos jam&aacute;s ser&aacute;n vencidos<br>Con todo el texto que desees</div>
+
+<div id="descripcion2" style= "position:Absolute;left:150; top:10; background-color:#cccccc; visibility:hidden;width:250px;height:58px;font-size: 8pt; font-family: arial,verdana,helvetica; color: #333399;padding:5px">El pueblo m&aacute;s tur&iacute;stico de todo el polo norte, a 20.000 kil&oacute;metros de la gasolinera m&aacute;s cercana</div>
+
+<div id="descripcion3" style= "position:Absolute;left:150; top:10; background-color:#cccccc; visibility:hidden;width:250px;height:58px;font-size: 8pt; font-family: arial,verdana,helvetica; color: #333399;padding:5px">Todos los enlaces que necesitas para entrar en Internet con las m&aacute;ximas garant&iacute;as de &eacute;xito.</div>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+//Lamentablemente, javascript no es un lenguaje con el que se pueda realizar un método 
+interesante para hacer que algunas páginas de nuestro sitio solo sean accesibles si se 
+introduce una clave correcta. Esto es debido a que Javascript es un lenguaje que se ejecuta
+ en el cliente. Al ejecutarse en el cliente cualquier persona puede leer el 
+código fuente de la página y tratar de burlar la seguridad por diversos mecanismos
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+   	<title>clave acceso</title>
+
+</head>
+
+<body>
+
+<SCRIPT>
+
+function acceso(){
+   	window.location = document.formclave.clave.value + ".html"
+}
+
+</SCRIPT>
+
+<FORM name=formclave>
+
+  
+<INPUT type=password name=clave>
+
+<INPUT type=button value=Acceder onclick="acceso()">
+
+</FORM>
+
+</body>
+
+</html>

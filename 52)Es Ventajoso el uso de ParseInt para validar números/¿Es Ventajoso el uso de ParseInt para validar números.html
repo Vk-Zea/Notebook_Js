@@ -1,0 +1,19 @@
+<script>
+    function validarNumero(c_numero)
+{
+   if (c_numero.length == 0)
+   {
+       return "NaN";
+   }
+   else
+   {
+       for (i = 0; i < c_numero.length; i++)
+       {
+          if (!((c_numero.charAt(i) >= "0") && (c_numero.charAt(i) <= "9")))
+          return "NaN";
+       }
+       return c_numero;
+   }
+}
+
+</script>

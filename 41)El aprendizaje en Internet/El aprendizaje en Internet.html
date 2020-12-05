@@ -1,0 +1,138 @@
+
+<script LANGUAGE="JavaScript">
+
+    var sumafa=0
+    
+    var sumaaci=0
+    
+    var res=0
+    
+    var nota=0
+    
+    function resbien(sumafa2)
+    {
+      sumaaci=sumaaci+1;
+      return true
+    }
+    
+    function resmal(sumafa2)
+    {
+      sumafa=sumafa+1;
+      return true
+    }
+    
+    function averiguarNota(nota2){
+      res=sumaaci+sumafa
+      res=res/10
+      nota=sumaaci/res
+      if (res <=0)
+      {
+        alert("Puedes empezar este ejercicio. ¡Suerte!")
+      }
+      else
+      if (nota >=10)
+      {
+        alert("Has tenido "+sumaaci+" aciertos y "+sumafa+" errores. Muy Bien. Magnífico")
+      }
+      else
+      if (nota >7)
+      {
+        alert("Has tenido "+sumaaci+" aciertos y "+sumafa+" errores. Bien, pero puedes mejorar.")
+      }
+      else
+      {
+        alert("Has tenido "+sumaaci+" aciertos y "+sumafa+" errores. Debes repetir el ejercicio.")
+      }
+    sumaaci=0
+    sumafa=0 }
+    
+    </script>
+    
+    Después pondremos el formulario en el cuerpo de la página. Contiene el ejercicio prpiamente dicho y los botones de "Ayuda", "Puntuación" y "Borrar contestaciones":
+    
+    <h1 align="center"><input Type="Button" Value="Ayuda" onclick="alert('abrir, advertir, afirmativo, amable, cueva, \n \nsubir, obstruir, atrever, avión, bandido.')"></h1>
+    <form NAME="bv">
+    <div align="center"><center><table border="8" width="346" cellspacing="1" cellpadding="1">
+    <tr>
+    <td width="182" bgcolor="#FFFFFF"><div align="center"><center><p><small><font face="Verdana" color="#FF0000"><b>a_rir</b></font></small></td>
+    <td width="152" align="center" bgcolor="#FFFFFF"><b><div align="center"><center><p>
+    <input Type="Button" Value=" b " onclick="resbien(); this.style.color='red'">
+    <input Type="Button" Value=" v " onclick="resmal(); alert('abrir, advertir, afirmativo, amable, cueva, \n \nsubir, obstruir, atrever, avión, bandido.')">
+    <input Type="Button" Value=" w " onclick="resmal(); alert('abrir, advertir, afirmativo, amable, cueva, \n \nsubir, obstruir, atrever, avión, bandido.')">
+    </b></td>
+    </tr>
+    <tr align="center">
+    <td width="182" bgcolor="#FFFFFF"><div align="center"><center><p><small><font
+    face="Verdana" color="#FF0000"><b>ad_ertir</b></font></small></td>
+    <b><td width="152" align="center" bgcolor="#FFFFFF"><b><input Type="Button" Value=" b "
+    onclick="resmal(); alert('abrir, advertir, afirmativo, amable, cueva, \n \nsubir, obstruir, atrever, avión, bandido. ')">
+    <input Type="Button" Value=" v " onClick="resbien(); this.style.color='red'"> <input
+    Type="Button" Value=" w "
+    onClick="resmal(); alert('abrir, advertir, afirmativo, amable, cueva, \n \nsubir, obstruir, atrever, avión, bandido.')">
+    </b></b></td>
+    </tr>
+    <tr align="center">
+    <td width="182" bgcolor="#FFFFFF"><div align="center"><center><p><small><font
+    face="Verdana" color="#FF0000"><b>afirmati_o</b></font></small></td>
+    <b><td width="152" align="center" bgcolor="#FFFFFF"><b><input Type="Button" Value=" b "
+    onclick="resmal(); alert('abrir, advertir, afirmativo, amable, cueva, \n \nsubir, obstruir, atrever, avión, bandido. ')">
+    <input Type="Button" Value=" v " onClick="resbien(); this.style.color='red'"> <input
+    Type="Button" Value=" w "
+    onClick="resmal(); alert('abrir, advertir, afirmativo, amable, cueva, \n \nsubir, obstruir, atrever, avión, bandido.')">
+    </b></b></td>
+    </tr>
+    </table>
+    </center></div><div align="center"><center><p><strong>
+    <input Type="Button" value="Puntuación" onclick="averiguarNota()">
+    <input TYPE="SUBMIT" VALUE="Borrar contestaciones" onblur="this.style.color='black'"> </p>
+    </center></div></form></strong>
+    
+    Podemos ver el ejemplo primero en funcionamiento en una hoja aparte.
+    
+    El segundo ejemplo que se propone tiene el mismo script de puntuaciones, un script con la función del popup y el código de ortografía de G y J. El código del script del popup es:
+    
+    <script LANGUAGE="JavaScript">
+    cnt = 0;
+    var wnd;
+    function popup(pagina)
+    {
+      cnt++;
+      if( wnd != null )
+      {
+        wnd.close();
+        wnd = null;
+      }
+      wnd = open(pagina, "gl"+cnt, "width=650, left=70, top=128, height=270");
+    }
+    
+    </script>
+    
+    Y el código del cuerpo de la página:
+    
+    <p align="center"><input TYPE="BUTTON" NAME="Ayuda" VALUE="AYUDA" onClick="popup('frayu05.htm');" <p> </p>
+    <form NAME="bv" onsubmit>
+    <div align="center"><center>
+    <table border="8" width="100%" cellspacing="1" cellpadding="1">
+    <tr>
+    <td width="75%" bgcolor="#FFFFFF"><div align="center"><center><p><small><b><font face="Verdana">Avísame cuando  <font color="#FF0000">despe_e  </font>el avión</font></b></small></td>
+    <td width="25%" align="center" bgcolor="#FFFFFF"><input Type="Button" Value=" g " onClick="resmal(); alert('El sonido G suave con A, O, U, se escribe GA, GO, GU y con E, I, se escribe GUE, GUI. \n \nEjemplos: goma, galleta, guapa, Miguel, guitarra, gorro, guerra.')">
+    <input Type="Button" Value=" gu " onClick="resbien(); this.style.color='red'"> </td></tr>
+    <tr align="center">
+    <td width="75%" bgcolor="#FFFFFF"><div align="center"><center><p><small><b><font
+    face="Verdana">Tu mamá es muy  <font color="#FF0000">ele_ante</font></font></b></small></td>
+    <td width="25%" align="center" bgcolor="#FFFFFF"><input Type="Button" Value=" g "
+    onClick="resbien(); this.style.color='red'"> <input Type="Button" Value=" gu "
+    onClick="resmal(); alert('El sonido G suave con A, O, U, se escribe GA, GO, GU y con E, I, se escribe GUE, GUI. \n \nEjemplos: goma, galleta, guapa, Miguel, guitarra, gorro, guerra.')">
+    </td></tr>
+    <tr align="center">
+    <td width="75%" bgcolor="#FFFFFF"><div align="center"><center><p><small><b><font
+    face="Verdana">Los Reyes Magos me  <font color="#FF0000">tra_eron  </font>una
+    bicicleta</font></b></small></td>
+    <td width="25%" align="center" bgcolor="#FFFFFF"><input Type="Button" Value=" g "
+    onClick="resmal(); alert('Llevan J las formas de los verbos que no tienen G ni J en el infinitivo. \n \nEjemplos: de decir, dijeron; de traer, trajimos, trajeron.')">
+    <input Type="Button" Value=" j " onClick="resbien(); this.style.color='red'"> </td></tr>
+    </table></center></div>
+    <div align="center"><center><p><strong>
+    <input Type="Button" value="Puntuación" onClick="averiguarNota()">
+    <input TYPE="SUBMIT" VALUE="Borrar contestaciones" onblur="this.style.color='black'"> </p>
+    </center></div></form></strong>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        describe('Gestion de cadenas', function () {
+            describe('subcadenas', function () {
+                it('prueba de subcadena', function () {
+                    assert.equal("Bella", "Panama es Bella".substring(10, 15));
+                });
+            });
+
+            describe('contador', function () {
+                it.skip('cantidad de caracteres', function () {
+                    assert.equal("Panama es Bella".length, 15);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

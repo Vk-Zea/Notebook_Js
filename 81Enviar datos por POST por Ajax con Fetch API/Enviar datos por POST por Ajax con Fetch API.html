@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const data = new FormData(document.getElementById('formulario'));
+        const data = new FormData();
+        data.append('empresa', 'DesarrolloWeb.com');
+        data.append('CIF', 'ESB00001111');
+        data.append('formacion_profesional', 'EscuelaIT');
+        fetch('../post.php', {
+            method: 'POST',
+            body: data
+        })
+            .then(function (response) {
+                if (response.ok) {
+                    return response.text()
+                } else {
+                    throw "Error en la llamada Ajax";
+                }
+
+            })
+            .then(function (texto) {
+                console.log(texto);
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    </script>
+</body>
+
+</html>

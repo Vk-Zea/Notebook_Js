@@ -1,0 +1,33 @@
+
+<a href="popup.html" id="mypopup">Abrir popup</a>
+
+<script type="text/javascript">
+
+   var x = getElementByID('mypopup');
+   
+   x.onclick = function() {
+   
+    window.open('popup.html', 'width=400,height=450,resizable=yes')
+   
+   }
+
+</script>
+<script type="text/javascript">
+
+    var myrules = {
+    
+       '#mypopup' : function(element){
+       
+          element.onclick = function(){
+          
+             window.open('popup.html', 'width=400,height=450,resizable=yes')
+          
+          }
+    
+       }
+ 
+ };
+ 
+ Behaviour.register(myrules);
+ 
+ </script>

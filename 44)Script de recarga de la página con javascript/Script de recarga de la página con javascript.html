@@ -1,0 +1,12 @@
+<script>
+    function aleatorio(inferior, superior) {
+        numPosibilidades = superior - inferior
+        aleat = Math.random() * numPosibilidades
+        aleat = Math.floor(aleat)
+        return parseInt(inferior) + aleat
+    }
+    num_aleatorio = aleatorio(5, 10)
+    miFecha = new Date()
+    dato_url = miFecha.getYear().toString() + miFecha.getMonth().toString() + miFecha.getDate().toString() + miFecha.getHours().toString() + miFecha.getMinutes().toString() + miFecha.getSeconds().toString()
+    setTimeout("window.location='pagina.html?parametro=" + dato_url + "'", num_aleatorio * 1000)
+</script>

@@ -1,0 +1,36 @@
+<p>
+    Este es el contenido del primer párrafo, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla.<br>
+    Este es el contenido del primer párrafo, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla.<br>
+    Este es el contenido del primer párrafo, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla.<br>
+    Este es el contenido del primer párrafo, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla.<br>
+    <a href="javascript:abrirVentana('1');">Simulacro de ventana Emergente 1</a>
+<p>
+    <script>
+        function abrirVentana(ventana) {
+            if (ventana == "1") {
+                document.getElementById("capaFondo1").style.visibility = "visible";
+                document.getElementById("capaFondo2").style.visibility = "hidden";
+                document.getElementById("capaFondo3").style.visibility = "hidden";
+            }
+            else if (ventana == "2") {
+                document.getElementById("capaFondo1").style.visibility = "hidden";
+                document.getElementById("capaFondo2").style.visibility = "visible";
+                document.getElementById("capaFondo3").style.visibility = "hidden";
+            }
+            else {
+                document.getElementById("capaFondo1").style.visibility = "hidden";
+                document.getElementById("capaFondo2").style.visibility = "hidden";
+                document.getElementById("capaFondo3").style.visibility = "visible";
+            }
+            document.getElementById("capaVentana").style.visibility = "visible";
+            document.formulario.bAceptar.focus();
+        }
+        function cerrarVentana() {
+            document.getElementById("capaFondo1").style.visibility = "hidden";
+            document.getElementById("capaFondo2").style.visibility = "hidden";
+            document.getElementById("capaFondo3").style.visibility = "hidden";
+            document.getElementById("capaVentana").style.visibility = "hidden";
+            document.formulario.bAceptar.blur();
+        }
+
+    </script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        console.log(this);
+
+
+        function bindeando() {
+            console.log(this);
+        }
+        bindeando.bind("hola mundo")();
+
+
+        var obj = {
+            nombre: "Nombre",
+            apellidos: "Apellido",
+            completo: function () {
+                return this.nombre + " " + this.apellidos;
+            }
+        }
+        console.log(obj.completo());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!--Hacer que cambie una imagen al pasar el ratón por encima, como invitando a pulsar le llamamos rollover.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Efecto rollover</h1>
+    <script language=javascript>
+        iluminada = new Image(10,84)
+        iluminada.src = "IMG.jpg"
+        apagada = new Image(300,34)
+        apagada.src = "IMAGEN.jpg"
+     </script>
+     <a href="ir_a.html"
+     onmouseover="window.document['imagen1'].src = iluminada.src"
+     onmouseout="window.document['imagen1'].src = apagada.src">
+     <img src="IMAGEN.jpg"name="imagen1" width=200 height=400>
+     </a>
+</body>
+</html>
+

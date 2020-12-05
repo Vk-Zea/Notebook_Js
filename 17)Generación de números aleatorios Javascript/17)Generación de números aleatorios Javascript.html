@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="javascript">
+
+        function aleatorio(a,b){
+            
+        return Math.round(Math.random()*(b-a)+parseInt(a));
+        }
+        function calcular_aleatorio() {
+            minimo = document.f1.inferior.value
+            maximo = document.f1.superior.value
+            resultado = aleatorio(minimo, maximo)
+            document.f1.res.value = resultado
+        }
+    </script>
+</head>
+<body>
+    <form name="f1">
+        Numero desde
+        <input maxlength="5" size="5" name="inferior">
+        <br>
+        Numero hasta 
+        <input maxlength="5" size="5" name="superior">
+        <br>
+        <br>
+        <input type="button" onclick="calcular_aleatorio()" value="Generar">
+        <br>
+        <br>
+        Numero
+        <input maxlength="5" size="5" name="res">
+    </form>
+</body>
+</html>

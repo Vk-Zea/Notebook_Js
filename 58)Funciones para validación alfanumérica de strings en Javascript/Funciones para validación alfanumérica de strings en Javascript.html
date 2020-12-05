@@ -1,0 +1,51 @@
+<script>
+    var numeros = "0123456789";
+
+    function tiene_numeros(texto) {
+        for (i = 0; i < texto.length; i++) {
+            if (numeros.indexOf(texto.charAt(i), 0) != -1) {
+                return 1;
+            }
+        }
+        return 0;
+    }
+    alert(tiene_numeros("ASAS1"));
+    alert(tiene_numeros("2asasasas"));
+    alert(tiene_numeros("asas2sG"));
+    alert(tiene_numeros("a...."));
+    alert(tiene_numeros("A22323G2.12"));
+
+
+    var letras = "abcdefghyjklmnñopqrstuvwxyz";
+
+    function tiene_letras(texto) {
+        texto = texto.toLowerCase();
+        for (i = 0; i < texto.length; i++) {
+            if (letras.indexOf(texto.charAt(i), 0) != -1) {
+                return 1;
+            }
+        }
+        return 0;
+    }
+    alert(tiene_letras("1"));
+    alert(tiene_letras("22323232s"));
+    alert(tiene_letras("22323232sf"));
+    alert(tiene_letras("a2232323"));
+    alert(tiene_letras("A22323G2.12"));
+
+    function tiene_minusculas(texto) {
+        for (i = 0; i < texto.length; i++) {
+            if (letras.indexOf(texto.charAt(i), 0) != -1) {
+                return 1;
+            }
+        }
+        return 0;
+    }
+
+    alert(tiene_minusculas("1"));
+    alert(tiene_minusculas("22323232s"));
+    alert(tiene_minusculas("22323232sf"));
+    alert(tiene_minusculas("a2232323"));
+    alert(tiene_minusculas("A22323G2.12"));
+
+</script>

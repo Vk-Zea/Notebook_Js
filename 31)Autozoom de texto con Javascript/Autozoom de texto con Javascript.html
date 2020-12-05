@@ -1,0 +1,38 @@
+<body onload="resetear(10, 48, 10, 'letras')">
+    <DIV id="letras" style="position:absolute; font-size:10px; height:56px; width: 761px; background-color: #CCFFCC;border: 1px none #000000;">Toda la frase va creciendo</DIV>
+    <p> </p>
+    <p> </p>
+    <p>Y qué pasa con el resto </p>
+    </body>
+<script language="JavaScript">
+    var banZoom = null
+    
+    function creceLetra()
+    {
+    var obj = banZoom
+    var tma
+    tma = parseInt(obj.style.fontSize)
+    window.status = obj.style.fontSize
+    if (tma<obj.maxTam)
+        {
+        obj.style.fontSize = tma + 1
+        setTimeout("creceLetra("+obj.maxTam+")",20)
+        }
+    else
+        setTimeout("resetear()",500)
+    
+    }
+    
+    function resetear(mn, mx, rapidez, idBan)
+    {
+    if (banZoom == null)
+        {
+        banZoom = document.getElementById(idBan)
+        banZoom.maxTam = mx
+        banZoom.minTam = mn
+        banZoom.rapidez = rapidez
+        }
+    banZoom.style.fontSize = banZoom.minTam
+    setTimeout("creceLetra()",rapidez)
+    }
+    </script>
